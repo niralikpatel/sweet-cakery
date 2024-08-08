@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+:root{
+    --pink : #E6A4B4;
+    --white: #ffff;
+    --light-black: #232b2b;
+    --light-blue: #7bb4f1e1;
+    --gray: #e9ecef;
+}
+body {
+    display: flex;
+    height: 100vh;
+}
+
+/* login */
+.backg {
+    font-family: 'Poppins', sans-serif;
+    background-color: #c9c0c0c4;
+    color: #333;
+    margin-left:0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box{
+    margin-left: 300px;
+}
+  .login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+  }
+  
+  .login-form {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+  
+  .input-field:hover, .input-field:focus {
+    border-color: #3498db;
+  }
+  
+  .login-button, .register-button {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .login-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .register-button {
+    background-color: transparent;
+    color: #333;
+  }
+  
+  .register-button:hover {
+    color: #3498db;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .login-container {
+      width: 90%;
+    }
+  }
+  
+/* sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--light-black);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    height: 130%;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--light-blue);
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    position: relative;
+}
+.sidebar-menu li a {
+    color: var(--white);
+    font-size: medium;
+    text-decoration: none;
+}
+.sidebar-menu li:hover {
+    background-color: var(--light-blue);
+}
+.sub-menu {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: var(--light-black);
+  width: 200px;
+}
+
+.sidebar-menu li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu li {
+  padding: 15px 20px;
+}
+
+.sub-menu li a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.sub-menu li:hover {
+  background-color: var(--light-blue);
+}
+
+/* .sidebar-menu .dropdown-menu {
+  background-color: var(--light-black);
+  border: none;
+}
+
+.sidebar-menu .dropdown-item {
+  color: var(--white);
+}
+
+.sidebar-menu .dropdown-item:hover {
+  background-color: #007bff;
+} */
+
+/* header */
+.header-content {
+    width: 100%;
+    /* flex: 1; */
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.topbar h1 {
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    padding-left: 650px;
+    align-items: center;
+}
+.user-info p {
+    margin: 0 10px 0 0;
+}
+
+
+/* DASHBOARD */
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+.dashboard-container2{
+  display: inline;
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  /* background-color: var(--gray); */
+  min-height: 100vh; /* Full viewport height */
+  flex-direction: column; /* Stack header and content vertically */
+}
+/* Card content styling */
+.card-content {
+  padding: 20px;
+  /* background-color: var(--gray); */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center the cards horizontally and wrap if needed */
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to new lines if not enough space */
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Space between cards */
+  max-width: 1200px; /* Optional: Max width to control layout */
+  width: 100%; /* Ensure full width */
+}
+
+/* Card styling */
+.card {
+  flex: 1;
+  max-width: 300px; /* Ensures cards don't grow too large */
+  min-width: 300px;
+  padding: 15px;
+  /* background-color: white; */
+  background-color: var(--gray);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 5px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 0;
+}
+
+/* breadcrumb */
+.bd{
+  margin-top: 8px;
+  padding: 8px;
+}
+
+/* Add category */
+.custom-btn{
+  background-color: var(--pink);
+  width: 100px;
+}
+.cat-box{
+  margin: 30px;
+  padding: 30px;
+  width: 80%;
+  background-color: var(--gray);
+  /* background-color: #0056b3; */
+}
+
+
+/* user tables view user*/
+.user-container{
+  /* padding: 20px; */
+  margin-top: 10px;
+  margin-left: 50px;
+  width: 80%;
+  /* background-color: var(--gray); */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+a {
+  color: var(--light-blue);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* update order */
+.update-order-content{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* Pagination Container */
+.pagination {
+  display:block;
+  /* justify-content: center; */
+  padding-bottom: 120px;
+  padding-left: 50px;;
+}
+
+.pagination a {
+  color: #000;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: #f8f9fa;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: var(--pink);
+  color: #fff;
+}
+
+.pagination a.active {
+  background-color: var(--pink);
+  color: white;
+  border: 1px solid --pink;
+}
+
+.pagination a.disabled {
+  color: #ccc;
+  pointer-events: none;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+}

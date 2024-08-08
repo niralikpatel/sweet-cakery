@@ -1,0 +1,568 @@
+/* global setting */
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+:root{
+    --pink : #E6A4B4;
+    --white: #ffff;
+    --light-black: #232b2b;
+    --gray: #e9ecef;
+    --light-blue: #ADD8E6;
+    --blue: #4f95ad;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -ms-overflow-style:scrollbar;
+}
+hr{
+    border: 1px solid;
+    color: var(--gray);
+}
+/* top header */
+.tp-hdr{
+    background-color: var(--pink);
+    height: 45px;
+    color: var(--white);
+}
+
+ul.thh-lft{
+    float: left;
+}
+ul.thh-lft li {
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 12px;
+} 
+li.hm {
+    margin-right: 15px;
+} 
+
+ul.thh-right{
+    float: right;
+} 
+ul.thh-rght li{
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: 20px;
+} 
+li.admn{
+    margin-left: 70%;
+} 
+ul.thh-rght a {
+	color: var(--white);
+} 
+
+/* navbar */
+/* .nvbr{
+    display: inline-block;
+    height: 55px;
+}
+ul.nv-ul li{
+    display: inline-block;
+    margin-top: 15px;
+    margin-inline: 50px;
+}
+ul.nv-ul a{
+    color: var(--light-black);
+} */
+.nvbr {
+    display: inline-block;
+    height: 55px;
+}
+
+/* ul.nv-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+} */
+
+.logo img{
+    width: 100px;   /* Set the desired width */
+    display: inline-block;
+    position: relative; 
+    bottom: 20px;
+    margin-top:1px;
+}
+.logo a:hover{
+    background: none;
+}
+ul.nv-ul li {
+    display: inline-block;
+    position: relative; 
+    margin-top: 15px;
+    margin-inline: 50px;
+}
+
+ul.nv-ul a {
+    color: var(--light-black);
+    /* text-decoration: none;
+    padding: 10px 15px;
+    display: block; */
+}
+
+ul.nv-ul li:hover {
+    background-color: var(--pink); /* Apply the hover color to the entire li */
+}
+
+/* Dropdown menu styles */
+ul.nv-ul li .dropdown {
+    display: none; /* Initially hide the dropdown */
+    position: absolute;
+    top: 100%; /* Position it directly below the parent li */
+    left: 0;
+    background-color: var(--white);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Ensure it is in front of other elements */
+    min-width: 100px; /* Adjust this as needed */
+    padding: 0;
+    margin: 0;
+}
+
+ul.nv-ul li:hover .dropdown {
+    display: block; /* Show the dropdown on hover */
+}
+
+ul.nv-ul li .dropdown li {
+    display: block;
+    margin: 0;
+}
+
+ul.nv-ul li .dropdown a {
+    padding: 5px 10px;
+    display: block;
+    width: 100%; /* Ensure the anchor spans the full width of the dropdown */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+ul.nv-ul li .dropdown a:hover {
+    background-color: var(--pink); /* Change this to your desired hover color */
+}
+
+/* banner -main page*/
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    /* background-image: url('../Admin/item-images/cupcake4.jpg'); Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    /* background: rgba(201, 31, 31, 0.5); */
+    border-radius: 10px;
+    animation: fadeInUp 2s ease-out;
+    color: palevioletred;
+}
+
+.banner-text h1 {
+    font-weight: bolder;
+    font-size: 3rem; /* Adjust as needed */
+    margin: 0;
+    animation: slideIn 2s ease-out;
+}
+
+.banner-text p {
+    font-size: 1.5rem; /* Adjust as needed */
+    margin: 0;
+    font-weight: bolder;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-fit: contain; */
+ }
+
+ /* other banners */
+
+ .banner-3 {
+    background: url(../images/cupcake1.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height:400px;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+a{
+    color: var(--light-black);
+}
+/* signup page */
+.rgr{
+    margin-top: 80px;
+    margin-left: 250px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--blue);
+}
+.box{
+    padding: 30px;
+    width: 100%;
+}
+.box2{
+    margin-left: 200px;
+}
+.custom-btn{
+    background-color: var(--pink);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* footer */
+.foot{
+    background-color: #353839;
+    color: var(--white);
+}
+.foot-rw{
+    padding-block: 50px;
+    margin-top: 50px;
+}
+
+/* index page */
+.index-content{
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.index-content h2{
+    color: var(--blue);
+    font-weight: bolder;
+}
+.about-text{
+    margin-top: 20px;
+    font-size:2.5ch;
+    color: var(--light-black);
+}
+.card-class img{
+    height: 300px;
+    width: 100%;
+}
+
+/* items-card */
+.item-content{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.item-content h2{
+    color: var(--blue);
+    font-weight: bolder;
+}
+.cake-info{
+    font-size:2.5ch;
+    color: var(--light-black);
+}
+.add-to-cart-btn {
+    display: block;
+    margin: 0 auto;
+}
+.srch{
+    margin-left: 100px;
+}
+/* .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+   */
+
+
+/* item details */
+.price-tag {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    color: var(--light-black);
+    padding: 10px 20px;
+    border-radius: 50% 50%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    /* height: 400px; Fixed height for the card */
+}
+
+.card img {
+    width: 100%;
+    height: 300px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.product-info {
+    margin-left: 40px;
+    /* margin-top: 10px; */
+}
+
+.product-info h2 {
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.product-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.detail-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.detail-item .label {
+    /* font-weight:; */
+    margin-right: 10px;
+    font-size: 130%;
+    color: var(--light-black);
+}
+.detail-item .detail-item-itext{
+    font-size:120%;
+    color: var(--light-black);
+}
+/* Pagination Container */
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.pagination a {
+    color: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #f8f9fa;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: var(--pink);
+    color: #fff;
+}
+
+.pagination a.active {
+    background-color: var(--pink);
+    color: white;
+    border: 1px solid --pink;
+}
+
+.pagination a.disabled {
+    color: #ccc;
+    pointer-events: none;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
+
+/* cart */
+.cart-content {
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
+table {
+    width: 80%;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+table,td,th{
+    border: 1px solid rgb(190, 190, 190);
+}
+th {
+    background-color: #f2f2f2;
+    color: var(--blue);
+    font-size: larger;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+.back-btn {
+    margin-bottom: 20px;
+}
+.cart-checkout {
+    margin-left: 750px;
+    width: 40%;
+}
+#final {
+    float: right;
+}
+
+/* checkout */
+.checkout-content{
+    margin-left: 100px;
+    margin-right: 50px;
+}
+.head-form{
+    margin-bottom: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--blue);
+}
+.bill-content{
+    padding-right: 10px;
+}
+.checkout2{
+    background-color: var(--gray);
+    padding: 20px;
+}
+.lft{
+    text-align: end;
+}
+
+/* oder details */
+.order-details{
+    margin-left: 150px;
+}
+#summary{
+    font-weight: bolder;
+}
+.order-item{
+    width: 80%;
+}
+.order-details h3{
+    color: var(--blue);
+    font-weight: bolder;
+}
+
+/* about */
+.about-content{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+.about-content h2{
+    color: var(--blue);
+    text-align: center;
+    font-weight: bolder;
+}
+.about{
+    color: var(--light-black);
+    text-align: center;
+    margin-top: 50px;
+    font-size:2.5ch;
+}
+
+/* contact */
+.contact-content{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+.contact-content h2{
+    color: var(--blue);
+    text-align: center;
+    font-weight: bolder;
+}
+.contact{
+    color: var(--light-black);
+    text-align: center;
+    margin-top: 50px;
+    font-size:2.5ch;
+}
+.info-column{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+/* thank you page */
+.last-page{
+    margin: 100px;
+    color: var(--blue);
+    text-align: center;
+}
+.last-page a{
+    color: var(--blue);
+}
+
+/* user profile */
+.profile-content{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+.profile-content h2{
+    color: var(--blue);
+    font-weight: bolder;
+}
+.profile-content h5{
+    color: var(--blue);
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
